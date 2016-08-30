@@ -180,6 +180,11 @@ catch (IOException e) {
 }
      }
    
+   
+   public static void decrypt(File f,String key, file cert) // this function decrypt the stolen sqlite Database.
+     {
+         
+     }
     /** This method is called from within the init() method to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
