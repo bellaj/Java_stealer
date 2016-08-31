@@ -3,7 +3,7 @@
 Java stealer is a simple Java applet that fetch for the chrome and Firefox stored passwords database. It upload ths sqlite files with the keys and Certificates to an ftp server and decrypt(function omitted from the github) the data.  
 <br>
 
-## Instruction   <br>
+## Instructions   <br>
 To use this applet follow these instruction :<br>
 <br>
 1- compile the code and generate .class<br>
